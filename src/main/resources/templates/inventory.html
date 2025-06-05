@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos</title>
+    <link rel="stylesheet" href="/css/Inventario.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Inventario de Productos</h1>
+
+        <!-- Tabla de productos -->
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Nombre del Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se van a mostrar los productos con Thymeleaf o en el backend -->
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.stock}"></td>
+                    <td>
+                        <!-- Botones de acción -->
+                        <a th:href="@{/product/edit/{id}(id=${product.id})}" class="btn btn-edit">Editar</a>
+                        
+                        <!-- Formulario para eliminar producto -->
+                        <form th:action="@{/product/delete/{id}(id=${product.id})}" method="post" style="display:inline;">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-delete">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botón para agregar nuevo producto -->
+        <div class="actions">
+            <a href="/product/add" class="btn btn-add">Agregar Nuevo Producto</a>
+        </div>
+<!-- Enlaces a las alertas de stock bajo y exceso de stock -->
+        <div class="actions">
+            <a href="/product/low-stock" class="btn btn-low-stock">Ver Alerta de Bajo Stock</a>
+            <a href="/product/over-stock" class="btn btn-over-stock">Ver Alerta de Exceso de Stock</a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas de Stock Bajo</title>
+    <link rel="stylesheet" href="/css/lowStockAlert.css">  <!-- Enlace a tu archivo CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Productos con Bajo Stock</h1>
+        
+        <!-- Verifica si hay productos con bajo stock -->
+        <div th:if="${#lists.isEmpty(lowStockProducts)}">
+            <p>No hay productos con bajo stock.</p>
+        </div>
+        
+        <!-- Si hay productos con bajo stock, los muestra -->
+        <div th:each="product : ${lowStockProducts}">
+            <p th:text="${product.name}">Nombre del Producto</p>
+            <p th:text="${product.stock}">Stock</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

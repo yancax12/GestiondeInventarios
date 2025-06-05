@@ -1,0 +1,134 @@
+/* Reset de márgenes y padding global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración global de fuentes y color de fondo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Contenedor principal del formulario */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2.4em;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilo para los campos del formulario */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    margin-top: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilo para los botones */
+button, .cancel-btn {
+    padding: 14px 40px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent;  /* Borde transparente inicialmente */
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de Actualizar Producto (Verde brillante) */
+.submit-btn {
+    background-color: #28a745;  /* Verde brillante */
+    border: 2px solid #218838;  /* Borde verde */
+    margin-right: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;  /* Verde más oscuro al hacer hover */
+    transform: scale(1.1);  /* Efecto de crecimiento al hacer hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);  /* Sombra más fuerte en hover */
+    border-color: #1e7e34;  /* Borde más oscuro al hacer hover */
+}
+
+/* Botón de Cancelar (Rojo brillante) */
+.cancel-btn {
+    background-color: #dc3545;  /* Rojo brillante */
+    border: 2px solid #c82333;  /* Borde rojo */
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;  /* Rojo más oscuro al hacer hover */
+    transform: scale(1.1);  /* Efecto de crecimiento al hacer hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);  /* Sombra más fuerte en hover */
+    border-color: #bd2130;  /* Borde más oscuro al hacer hover */
+}
+
+/* Estilos para el diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    button, .cancel-btn {
+        font-size: 1em;
+        padding: 12px 30px;
+    }
+}

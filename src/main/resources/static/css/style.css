@@ -1,0 +1,206 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* Fondo suave */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1c3d6e; /* Color de fondo oscuro */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+header .logo h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Color de hover para los enlaces */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero .btn {
+    background-color: #f39c12; /* Color amarillo para el botón */
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e67e22; /* Color de hover */
+}
+
+/* Section de Productos */
+.products-section {
+    padding: 60px 0;
+    background-color: #fff; /* Fondo blanco */
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 30px;
+    padding: 0 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo de las tarjetas de producto */
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    max-width: 350px;
+    min-width: 300px;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al pasar el cursor */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ajuste de la imagen */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #777; /* Color gris claro */
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f39c12; /* Color amarillo */
+    margin-bottom: 15px;
+}
+
+.product-card .btn {
+    background-color: #1c3d6e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #0056b3; /* Color de hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #ccc; /* Color gris claro para el texto del footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Para pantallas pequeñas, 1 columna */
+    }
+
+    .product-card {
+        max-width: 100%; /* Para que las tarjetas se ajusten en pantallas pequeñas */
+    }
+}

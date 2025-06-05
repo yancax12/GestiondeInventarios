@@ -1,0 +1,121 @@
+/* Estilos generales para la página de alertas */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Mensaje de alerta cuando no hay productos con bajo stock */
+.container div {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los productos listados */
+.product-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada producto */
+.product-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el nombre del producto */
+.product-item .product-name {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilo para el stock */
+.product-item .product-stock {
+    color: #F44336;  /* Rojo para indicar bajo stock */
+    font-weight: bold;
+}
+
+/* Botones de acción */
+.actions {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botón para regresar a la lista */
+.btn-back {
+    background-color: #4CAF50;
+}
+
+.btn-back:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Hacer la página responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-item .product-stock {
+        margin-top: 10px;
+    }
+}

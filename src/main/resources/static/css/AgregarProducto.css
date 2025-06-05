@@ -1,0 +1,113 @@
+/* Reset de márgenes y padding global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración global de fuentes y color de fondo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Contenedor principal del formulario */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Estilo del encabezado */
+h1 {
+    font-size: 2.2em;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Estilo para los campos del formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Estilo para los botones */
+button, .cancel-btn {
+    padding: 10px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    margin-right: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn {
+    background-color: #F44336;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para el diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    button, .cancel-btn {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}

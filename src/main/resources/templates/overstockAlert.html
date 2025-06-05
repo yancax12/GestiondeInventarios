@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas de Exceso de Stock</title>
+    <link rel="stylesheet" href="/css/overstockAlert.css">  <!-- Enlace a tu archivo CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Productos con Exceso de Stock</h1>
+
+        <!-- Verifica si hay productos con exceso de stock -->
+        <div th:if="${#lists.isEmpty(overStockProducts)}">
+            <p>No hay productos con exceso de stock.</p>
+        </div>
+
+        <!-- Si hay productos con exceso de stock, los muestra -->
+        <div th:each="product : ${overStockProducts}">
+            <p th:text="${product.name}">Nombre del Producto</p>
+            <p th:text="${product.stock}">Stock</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

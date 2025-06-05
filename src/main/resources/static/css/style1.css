@@ -1,0 +1,145 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general y tipografía base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Información del producto */
+.product-info {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #34495e;
+}
+
+/* Estilos para los mensajes de éxito y error */
+.messages p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.mensaje-exito {
+    color: #27ae60;
+}
+
+.mensaje-error {
+    color: #e74c3c;
+}
+
+/* Estilo del formulario */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo del campo de tarjeta */
+#card-element {
+    width: 100%;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Estilo para mostrar errores */
+#card-errors {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Estilos para los datos del usuario (nombre y correo) */
+.user-info {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.user-info label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.user-info input {
+    width: 100%;
+    padding: 12px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botón de pago */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

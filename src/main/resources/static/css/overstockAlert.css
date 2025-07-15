@@ -1,17 +1,18 @@
 /* Definición de variables CSS para mantener el diseño consistente */
 :root {
-    --primary-color: #ff7043; /* Naranja suave para productos con bajo stock */
-    --secondary-color: #42a5f5; /* Azul suave para botones */
-    --neutral-color-light: #f9f9f9; /* Fondo claro */
-    --neutral-color-dark: #424242; /* Texto oscuro para contraste */
-    --background-color: #f2f2f2; /* Fondo suave y moderno */
-    --border-color: #dddddd; /* Color suave para bordes */
+    --primary-color: #007bff; /* Azul brillante para elementos principales */
+    --secondary-color: #f44336; /* Rojo para advertencias */
+    --neutral-color-light: #f4f7fc; /* Fondo claro */
+    --neutral-color-dark: #555; /* Texto oscuro para contraste */
+    --white-color: #ffffff;
+    --background-color: #f8f9fa; /* Fondo suave */
+    --border-color: #e0e0e0; /* Color para bordes suaves */
     --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra suave */
-    --shadow-medium: rgba(0, 0, 0, 0.2); /* Sombra intermedia */
-    --font-family: 'Poppins', sans-serif; /* Fuente moderna y clara */
-    --font-family-heading: 'Roboto', sans-serif; /* Fuente para encabezados */
+    --shadow-medium: rgba(0, 0, 0, 0.15); /* Sombra intermedia */
+    --font-family: 'Arial', sans-serif; /* Fuente limpia */
+    --font-family-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de encabezado */
     --font-size-base: 1rem; /* Tamaño base de fuente */
-    --font-size-lg: 1.1rem; /* Tamaño de fuente para encabezados y títulos */
+    --font-size-lg: 1.25rem; /* Tamaño de fuente para encabezados y títulos */
     --transition-speed: 0.3s; /* Velocidad de transición */
 }
 
@@ -31,31 +32,28 @@ body {
 /* Contenedor principal de la página */
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     background-color: var(--white-color);
-    padding: 40px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-light);
     text-align: center;
-    box-sizing: border-box;
-    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+    transition: box-shadow var(--transition-speed);
 }
 
 .container:hover {
-    box-shadow: 0 6px 18px var(--shadow-medium); /* Sombra más fuerte al pasar el mouse */
-    transform: scale(1.03); /* Efecto de elevación */
+    box-shadow: 0 6px 15px var(--shadow-medium); /* Sombra más fuerte al pasar el mouse */
 }
 
 /* Título principal */
 h1 {
     font-family: var(--font-family-heading);
-    font-size: 2.6rem; /* Título destacado */
+    font-size: 2.5rem; /* Título destacado */
     color: var(--primary-color);
     margin-bottom: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color var(--transition-speed);
 }
 
 /* Mensaje informativo (alertas) */
@@ -64,7 +62,6 @@ h1 {
     color: var(--neutral-color-dark);
     margin-bottom: 20px;
     font-weight: 500;
-    line-height: 1.5;
 }
 
 /* Estilo de los productos */
@@ -76,10 +73,10 @@ h1 {
 
 /* Estilo para cada producto */
 .product-item {
-    background-color: var(--neutral-color-light);
+    background-color: #f9f9f9;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 25px;
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -90,19 +87,19 @@ h1 {
 }
 
 .product-item:hover {
-    transform: scale(1.05); /* Aumento sutil de tamaño al pasar el mouse */
+    transform: scale(1.02); /* Sutil aumento de tamaño al pasar el mouse */
     box-shadow: 0 6px 12px var(--shadow-medium); /* Sombra más fuerte */
 }
 
 /* Nombre del producto */
 .product-item .product-name {
-    color: var(--neutral-color-dark);
+    color: #333;
     font-weight: 600;
 }
 
 /* Estilo para el stock bajo */
 .product-item .product-stock {
-    color: var(--primary-color); /* Naranja suave para bajo stock */
+    color: var(--secondary-color); /* Rojo para indicar bajo stock */
     font-weight: bold;
 }
 
@@ -122,7 +119,6 @@ h1 {
     display: inline-block;
     cursor: pointer;
     transition: background-color var(--transition-speed), transform var(--transition-speed);
-    text-transform: uppercase;
 }
 
 .btn:hover {
@@ -131,11 +127,11 @@ h1 {
 
 /* Botón para regresar a la lista */
 .btn-back {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 .btn-back:hover {
-    background-color: #0277bd; /* Cambio de color de hover */
+    background-color: #0069d9;
 }
 
 /* Estilos de los enlaces */

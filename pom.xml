@@ -50,25 +50,30 @@
             <version>8.0.33</version>
         </dependency>
 
-        <!-- Apache Commons Lang -->
+        <!-- Spring Boot Starter Security -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.13.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- Google Guava -->
+        <!-- Spring Boot Starter Thymeleaf -->
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>32.1.2-jre</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <!-- Logback Classic -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.11</version>
+            <version>1.4.6</version>
+        </dependency>
+
+        <!-- Logback Core -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.4.6</version>
         </dependency>
 
         <!-- JUnit Jupiter -->
@@ -79,18 +84,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- Stripe Java SDK -->
         <dependency>
             <groupId>com.stripe</groupId>
             <artifactId>stripe-java</artifactId>
-            <version>20.101.0</version> <!-- Última versión -->
+            <version>20.101.0</version>
         </dependency>
 
         <!-- Mockito Core para pruebas -->
@@ -100,13 +98,6 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Spring Boot Starter Thymeleaf -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
     </dependencies>
 
     <!-- Build y Plugins -->
@@ -129,7 +120,6 @@
                     <target>21</target>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

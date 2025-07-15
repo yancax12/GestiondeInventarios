@@ -11,3 +11,6 @@ public class InventariosApplication {
         System.out.println("\n>>> Abre en tu navegador: http://localhost:8080\n");
     }
 }
+
+
+
